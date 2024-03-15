@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <ul>
+        {% for participant, data in weighted_averages.items() %}
+            <li>
+                Participant: {{ participant }}
+                Total Votes: {{ data.total_votes }}
+                Weighted Score: {{ data.weighted_score }}
+                Weighted Average: {{ data.weighted_average }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
